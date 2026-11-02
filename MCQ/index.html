@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyansetu Odisha MCQ</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#f0f4ff;
+ color:#172554;
+}
+header{
+ background:linear-gradient(135deg,#102d69,#3478db);
+ color:white;
+ text-align:center;
+ padding:30px 15px;
+}
+header h1{margin:0;font-size:27px}
+header p{margin:8px 0 0}
+.container{max-width:600px;margin:25px auto;padding:15px}
+h2{text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+button{
+ width:100%;padding:20px 8px;
+ border:0;border-radius:14px;
+ background:white;color:#173d83;
+ font-size:17px;font-weight:bold;
+ box-shadow:0 3px 12px #0002;
+ cursor:pointer;
+}
+button:active{transform:scale(.97)}
+.subject{padding:17px}
+.back{
+ background:#183e83;color:white;
+ margin-bottom:20px;
+}
+.page{display:none}
+.page.active{display:block}
+footer{text-align:center;color:#65738b;padding:25px;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>GYANSETU ODISHA</h1>
+<p>Chapter Wise MCQ Practice</p>
+</header>
+
+<div class="container">
+
+<div id="home" class="page active">
+<h2>SELECT YOUR CLASS</h2>
+<div class="grid">
+<button onclick="showClass(9)">CLASS 9</button>
+<button onclick="showClass(10)">CLASS 10</button>
+</div>
+</div>
+
+<div id="subjects" class="page">
+<button class="back" onclick="goHome()">← BACK</button>
+<h2 id="classTitle"></h2>
+<div class="grid" id="subjectList"></div>
+</div>
+
+<footer>GYANSETU ODISHA © 2026</footer>
+</div>
+
+<script>
+const subjects=[
+"ENGLISH","GEOGRAPHY","HINDI","HISTORY",
+"MATHEMATICS","ODIA","SCIENCE","TLS"
+];
+
+function showClass(c){
+ document.getElementById("home").classList.remove("active");
+ document.getElementById("subjects").classList.add("active");
+ document.getElementById("classTitle").innerText="CLASS "+c+" SUBJECTS";
+
+ let list=document.getElementById("subjectList");
+ list.innerHTML="";
+
+ subjects.forEach(s=>{
+  let b=document.createElement("button");
+  b.className="subject";
+  b.innerText=s;
+  b.onclick=()=>openSubject(c,s);
+  list.appendChild(b);
+ });
+}
+
+function goHome(){
+ document.getElementById("subjects").classList.remove("active");
+ document.getElementById("home").classList.add("active");
+}
+
+function openSubject(c,s){
+ window.location.href="../CLASS"+c+"/"+s+"/index.html";
+}
+</script>
+
+</body>
+</html>
