@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chapter 1 - ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ | MCQ Practice</title>
+<style>
+:root{--primary:#5b21b6;--light:#f3e8ff;--ink:#241b35;--good:#15803d;--bad:#b91c1c}
+*{box-sizing:border-box}
+body{margin:0;background:#f5f3ff;color:var(--ink);font-family:"Noto Sans Oriya","Noto Sans Odia",system-ui,sans-serif;line-height:1.65}
+header{background:linear-gradient(135deg,#4c1d95,#7e22ce);color:white;padding:24px 16px;text-align:center}
+header h1{font-size:clamp(22px,5vw,30px);margin:0 0 6px}
+header p{margin:0;opacity:.92}
+.wrap{max-width:850px;margin:18px auto;padding:0 12px 30px}
+.info,.question,.result{background:white;border-radius:14px;padding:16px;margin:14px 0;box-shadow:0 3px 14px #2e10651a}
+.info{border-left:5px solid var(--primary)}
+.progressrow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:700;color:var(--primary)}
+.progress{height:8px;background:#e9d5ff;border-radius:20px;overflow:hidden;margin-top:9px}
+.bar{height:100%;width:0;background:var(--primary);transition:width .2s}
+.question h3{font-size:17px;margin:0 0 12px}
+.qno{color:var(--primary);font-weight:800}
+.option{display:flex;align-items:flex-start;gap:9px;border:1px solid #e5e1ed;border-radius:10px;padding:10px 12px;margin:8px 0;cursor:pointer}
+.option:hover{background:#faf5ff;border-color:#c4b5fd}
+.option input{margin-top:6px;accent-color:var(--primary)}
+.option.correct{border-color:var(--good);background:#f0fdf4}
+.option.wrong{border-color:var(--bad);background:#fef2f2}
+.explain{display:none;margin-top:10px;padding:10px 12px;background:#f5f3ff;border-radius:9px;font-size:14px}
+button{border:0;border-radius:10px;padding:12px 18px;font-size:16px;font-weight:700;cursor:pointer}
+#submit{background:var(--primary);color:white;width:100%;margin:12px 0}
+#retry{background:#ede9fe;color:#4c1d95;margin-top:12px}
+.result{display:none;text-align:center;border:2px solid #c4b5fd}
+.score{font-size:32px;font-weight:900;color:var(--primary)}
+.small{font-size:13px;color:#665b78}
+footer{text-align:center;color:#756b84;font-size:12px;padding:15px}
+</style>
+</head>
+<body>
+<header>
+  <h1>ଅଧ୍ୟାୟ – ୧ : ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ</h1>
+  <p>Class 10 • MIL Odia • Exam-Oriented MCQ Practice</p>
+</header>
+<main class="wrap">
+  <section class="info">
+    <strong>ଅଭ୍ୟାସ ନିର୍ଦ୍ଦେଶ:</strong>
+    ପ୍ରତ୍ୟେକ ପ୍ରଶ୍ନର ଗୋଟିଏ ଠିକ୍ ଉତ୍ତର ବାଛନ୍ତୁ। ସମସ୍ତ ପ୍ରଶ୍ନର ଉତ୍ତର ଦେଇ
+    <b>Submit & Check Score</b> ଦବାନ୍ତୁ। ଫଳାଫଳ ସହିତ ଠିକ୍ ଉତ୍ତର ଓ ସଂକ୍ଷିପ୍ତ ବ୍ୟାଖ୍ୟା ଦେଖିପାରିବେ।
+  </section>
+  <div class="progressrow"><span id="answered">ଉତ୍ତର ଦିଆଯାଇଛି: ୦ / ୩୦</span><span>ମୋଟ ମାର୍କ: ୩୦</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <form id="quiz"></form>
+  <button id="submit" type="button">Submit &amp; Check Score</button>
+  <section class="result" id="result" aria-live="polite">
+    <div>ଆପଣଙ୍କ ଫଳାଫଳ</div>
+    <div class="score" id="score"></div>
+    <div id="remark"></div>
+    <button id="retry" type="button">Try Again</button>
+  </section>
+  <p class="small">ଟିପ୍ପଣୀ: ପ୍ରଶ୍ନଗୁଡ଼ିକ ଆପଣ ଦେଇଥିବା ପାଠ୍ୟପୁସ୍ତକର ଅଧ୍ୟାୟ, କବି ପରିଚୟ, କବିତାର ଭାବ ଓ ଶବ୍ଦାର୍ଥ ଆଧାରରେ ପ୍ରସ୍ତୁତ।</p>
+</main>
+<footer>Odia MIL • Chapter 1 Practice Test</footer>
+<script>
+const questions = [
+{q:"‘ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ’ କବିତାର ରଚୟିତା କିଏ?",o:["ଗଙ୍ଗାଧର ମେହେର","ଲକ୍ଷ୍ମୀକାନ୍ତ ମହାପାତ୍ର","ଫକୀରମୋହନ ସେନାପତି","ରାଧାନାଥ ରାୟ"],a:1,e:"ପାଠ୍ୟର କବି ପରିଚୟ ଅନୁସାରେ ଏହି କବିତାର ରଚୟିତା ଲକ୍ଷ୍ମୀକାନ୍ତ ମହାପାତ୍ର।"},
+{q:"‘ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ’ କବିତାର ମୁଖ୍ୟ ଭାବ କ’ଣ?",o:["ପ୍ରକୃତିର ବିନାଶ","ମାତୃଭୂମି ଓ ଉତ୍କଳ ପ୍ରତି ଗଭୀର ଶ୍ରଦ୍ଧା","ଯୁଦ୍ଧର ବର୍ଣ୍ଣନା","ବ୍ୟକ୍ତିଗତ ଦୁଃଖ"],a:1,e:"କବିତାରେ ଉତ୍କଳ ମାତାଙ୍କ ଗୁଣଗାନ ଓ ମାତୃଭୂମି ପ୍ରତି ଭକ୍ତି ପ୍ରକାଶ ପାଇଛି।"},
+{q:"କବିତାରେ ‘ଜନନୀ’ ଶବ୍ଦଟି କାହାକୁ ସୂଚାଏ?",o:["ନଦୀକୁ","ଉତ୍କଳ ମାତା ବା ଓଡ଼ିଶାକୁ","ପର୍ବତକୁ","କବିଙ୍କ ମାତାଙ୍କୁ"],a:1,e:"ଏଠାରେ ଜନନୀ ହେଉଛନ୍ତି ମାତୃଭୂମି ଉତ୍କଳ।"},
+{q:"‘ଉତ୍କଳ’ କେଉଁ ଅଞ୍ଚଳର ପୁରାତନ ନାମ?",o:["ଓଡ଼ିଶା","ବିହାର","ଆସାମ","ପଞ୍ଜାବ"],a:0,e:"ଉତ୍କଳ ଓଡ଼ିଶାର ଏକ ପୁରାତନ ନାମ।"},
+{q:"କବିତାରେ ଉତ୍କଳ ମାତାଙ୍କ କେଉଁ ଦିଗର ଗୁଣଗାନ ହୋଇଛି?",o:["କେବଳ ରାଜନୀତି","ପ୍ରକୃତି, ସଂସ୍କୃତି, ଐତିହ୍ୟ ଓ ସୌନ୍ଦର୍ଯ୍ୟ","କେବଳ ବାଣିଜ୍ୟ","କେବଳ ଯୁଦ୍ଧକଳା"],a:1,e:"କବିତାରେ ଉତ୍କଳର ପ୍ରାକୃତିକ ଓ ସାଂସ୍କୃତିକ ମହିମା ଚିତ୍ରିତ।"},
+{q:"‘ବନ୍ଦେ’ ଶବ୍ଦର ନିକଟତମ ଅର୍ଥ କ’ଣ?",o:["ନିନ୍ଦା କରେ","ବନ୍ଦନା କରେ","ଭୁଲିଯାଏ","ଭୟ କରେ"],a:1,e:"‘ବନ୍ଦେ’ର ଅର୍ଥ ନମସ୍କାର ବା ବନ୍ଦନା କରିବା।"},
+{q:"କବିତାରେ ଉତ୍କଳର କେଉଁ ପ୍ରାକୃତିକ ଉପାଦାନର ଚିତ୍ର ମିଳେ?",o:["ପର୍ବତ, ନଦୀ ଓ ସମୁଦ୍ର","ମରୁଭୂମି ମାତ୍ର","ହିମଖଣ୍ଡ ମାତ୍ର","ଆଗ୍ନେୟଗିରି ମାତ୍ର"],a:0,e:"କବିତାରେ ଉତ୍କଳର ପ୍ରକୃତି ଓ ଭୌଗୋଳିକ ସୌନ୍ଦର୍ଯ୍ୟର ଉଲ୍ଲେଖ ରହିଛି।"},
+{q:"କବି ଉତ୍କଳ ମାତାଙ୍କୁ କେଉଁ ଭାବରେ ସମ୍ବୋଧନ କରିଛନ୍ତି?",o:["ଶତ୍ରୁ ଭାବରେ","ପୂଜନୀୟ ମାତୃରୂପେ","ଅଜଣା ଦେଶ ଭାବରେ","ବ୍ୟବସାୟୀ ଭାବରେ"],a:1,e:"କବି ଉତ୍କଳକୁ ମାତା ଭାବେ ଦେଖି ଭକ୍ତି ଓ ଶ୍ରଦ୍ଧା ଜଣାଇଛନ୍ତି।"},
+{q:"‘ଜନନୀ’ ଶବ୍ଦର ଅର୍ଥ କ’ଣ?",o:["ମାତା","ଭଉଣୀ","କନ୍ୟା","ସଖୀ"],a:0,e:"ଜନନୀର ଅର୍ଥ ମାତା।"},
+{q:"ଏହି କବିତାରେ କେଉଁ ଭାବଧାରା ପ୍ରଧାନ?",o:["ଦେଶପ୍ରେମ","ହାସ୍ୟରସ","ଭୟ","କରୁଣା"],a:0,e:"ମାତୃଭୂମି ପ୍ରତି ଗର୍ବ, ଭକ୍ତି ଓ ଦେଶପ୍ରେମ ଏହାର ପ୍ରଧାନ ଭାବ।"},
+{q:"କବିତାରେ ଓଡ଼ିଶାର କେଉଁ ଐତିହ୍ୟକୁ ଗୁରୁତ୍ୱ ଦିଆଯାଇଛି?",o:["କଳା ଓ ସଂସ୍କୃତି","କେବଳ ଆଧୁନିକ ଶିଳ୍ପ","କେବଳ କ୍ରୀଡ଼ା","କେବଳ ବିଦେଶୀ ଭାଷା"],a:0,e:"ଉତ୍କଳର କଳା, ସଂସ୍କୃତି ଓ ଐତିହ୍ୟ କବିତାର ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ ଅଂଶ।"},
+{q:"କବିତାରେ ପୁନରାବୃତ୍ତ ‘ଜନନୀ, ଜନନୀ, ଜନନୀ’ ପଦର ପ୍ରଭାବ କ’ଣ?",o:["ଭାବକୁ ଦୁର୍ବଳ କରେ","ମାତୃଭୂମି ପ୍ରତି ଭକ୍ତି ଓ ଆବେଗକୁ ଗାଢ଼ କରେ","କବିତାକୁ ଗଦ୍ୟ କରେ","ଅର୍ଥ ବଦଳାଏ"],a:1,e:"ପୁନରାବୃତ୍ତି ମାତୃଭୂମି ପ୍ରତି ଭାବାବେଗ ଓ ଶ୍ରଦ୍ଧାକୁ ଜୋରଦାର କରେ।"},
+{q:"କବିତାର ଶୀର୍ଷକ ‘ବନ୍ଦେ ଉତ୍କଳ ଜନନୀ’ କାହାର ବନ୍ଦନାକୁ ସୂଚାଏ?",o:["ବିଦେଶୀ ଶାସକଙ୍କ","ଉତ୍କଳ ମାତାଙ୍କ","କୌଣସି ରାଜାଙ୍କ","ଏକ ନଦୀର"],a:1,e:"ଶୀର୍ଷକରେ ଉତ୍କଳ ମାତାଙ୍କୁ ବନ୍ଦନା କରାଯାଇଛି।"},
+{q:"କବିତାରେ ପ୍ରକୃତିର ବର୍ଣ୍ଣନା କାହିଁକି ଆସିଛି?",o:["ଉତ୍କଳର ମହିମା ଦେଖାଇବାକୁ","ହାସ୍ୟ ସୃଷ୍ଟି କରିବାକୁ","ଯୁଦ୍ଧ ବୁଝାଇବାକୁ","କାହାଣୀ ଶେଷ କରିବାକୁ"],a:0,e:"ପ୍ରକୃତିର ସୌନ୍ଦର୍ଯ୍ୟ ମାଧ୍ୟମରେ କବି ଉତ୍କଳର ମହିମା ପ୍ରକାଶ କରିଛନ୍ତି।"},
+{q:"‘ମାତୃଭୂମି’ କହିଲେ କ’ଣ ବୁଝାଯାଏ?",o:["ଯେଉଁ ଦେଶରେ ଜନ୍ମ ଓ ଲାଳନପାଳନ ହୁଏ","ବିଦେଶୀ ଦେଶ","କେବଳ ଘର","କେବଳ ଗାଁର ରାସ୍ତା"],a:0,e:"ମାତୃଭୂମି ହେଉଛି ନିଜ ଜନ୍ମଭୂମି ବା ଦେଶ।"},
+{q:"କବିତା ପାଠ କରିବାବେଳେ କେଉଁ ମନୋଭାବ ରଖିବା ଉଚିତ?",o:["ଅବହେଳା","ଶ୍ରଦ୍ଧା ଓ ଦେଶପ୍ରେମ","ଘୃଣା","ଉଦାସୀନତା"],a:1,e:"କବିତାର ମୂଳ ଭାବକୁ ବୁଝିବା ପାଇଁ ଶ୍ରଦ୍ଧା ଓ ଦେଶପ୍ରେମ ଆବଶ୍ୟକ।"},
+{q:"କବିତାରେ ଉତ୍କଳର ଗୌରବ କେଉଁ ମାଧ୍ୟମରେ ପ୍ରକାଶିତ?",o:["ପ୍ରକୃତି ଓ ଐତିହ୍ୟର ଚିତ୍ରଣ","କେବଳ ହାସ୍ୟ କାହାଣୀ","କେବଳ ଚିଠି","କେବଳ ଯାତ୍ରା ବିବରଣୀ"],a:0,e:"ପ୍ରକୃତି, ଐତିହ୍ୟ, କଳା ଓ ସଂସ୍କୃତିର ଚିତ୍ରଣ ଦ୍ୱାରା ଗୌରବ ପ୍ରକାଶ ପାଇଛି।"},
+{q:"‘ବନ୍ଦନା’ ଶବ୍ଦର ଅର୍ଥ କ’ଣ?",o:["ପ୍ରଶଂସା/ସ୍ତୁତି","ଅପମାନ","ବିରୋଧ","ବିଚ୍ଛେଦ"],a:0,e:"ବନ୍ଦନା ଅର୍ଥ ସ୍ତୁତି ବା ଶ୍ରଦ୍ଧାପୂର୍ଣ୍ଣ ପ୍ରଣାମ।"},
+{q:"ଏହି କବିତା ପାଠକଙ୍କ ମନରେ କେଉଁ ଭାବ ଜାଗ୍ରତ କରେ?",o:["ନିଜ ମାଟି ପ୍ରତି ଗର୍ବ","ଅନ୍ୟ ଦେଶ ପ୍ରତି ଘୃଣା","ପ୍ରକୃତି ପ୍ରତି ଅନାଗ୍ରହ","ଭୟ"],a:0,e:"କବିତା ନିଜ ମାଟି, ଭାଷା ଓ ସଂସ୍କୃତି ପ୍ରତି ଗର୍ବ ଜାଗ୍ରତ କରେ।"},
+{q:"‘ଉତ୍କଳ ଜନନୀ’ କାହାର ପ୍ରତୀକ?",o:["ଓଡ଼ିଆ ଜାତି ଓ ମାତୃଭୂମିର","କେବଳ ଏକ ପରିବାରର","ଏକ ବିଦ୍ୟାଳୟର","ଏକ ବ୍ୟକ୍ତିର"],a:0,e:"ଉତ୍କଳ ଜନନୀ ଓଡ଼ିଶା ମାତୃଭୂମି ଓ ଓଡ଼ିଆ ଜାତୀୟ ଚେତନାର ପ୍ରତୀକ।"},
+{q:"କବିତାର ଭାଷା ଓ ଭାବ ପାଠକଙ୍କୁ କ’ଣ କରିବାକୁ ପ୍ରେରଣା ଦିଏ?",o:["ମାତୃଭୂମିକୁ ସମ୍ମାନ କରିବାକୁ","ଭାଷାକୁ ଭୁଲିବାକୁ","ସଂସ୍କୃତିକୁ ଅବହେଳା କରିବାକୁ","ପ୍ରକୃତି ନଷ୍ଟ କରିବାକୁ"],a:0,e:"କବିତା ନିଜ ମାଟି, ଭାଷା ଓ ସଂସ୍କୃତିକୁ ସମ୍ମାନ କରିବାର ପ୍ରେରଣା ଦିଏ।"},
+{q:"କବିତାରେ ଉତ୍କଳର ଲୋକମାନଙ୍କ ସହ କେଉଁ ସମ୍ପର୍କ ଦେଖାଯାଏ?",o:["ମାତୃଭୂମି ସହ ଆତ୍ମୀୟ ସମ୍ପର୍କ","ଶତ୍ରୁତା","ଅଜଣା ସମ୍ପର୍କ","ବାଣିଜ୍ୟିକ ସମ୍ପର୍କ"],a:0,e:"ଉତ୍କଳବାସୀଙ୍କ ମାତୃଭୂମି ସହ ଗଭୀର ଆତ୍ମୀୟତା ପ୍ରକାଶ ପାଇଛି।"},
+{q:"କବିତାର ଧ୍ୱନି ଓ ଶୈଳୀ କେଉଁ ଭାବକୁ ଉଜାଗର କରେ?",o:["ଭକ୍ତି ଓ ଗର୍ବ","ବ୍ୟଙ୍ଗ","ଭୟ","ନିରାଶା"],a:0,e:"କବିତାର ଗୀତିମୟ ଶୈଳୀ ମାତୃଭୂମି ପ୍ରତି ଭକ୍ତି ଓ ଗର୍ବକୁ ଉଜାଗର କରେ।"},
+{q:"ଓଡ଼ିଶାର ଭାଷା ଓ ସଂସ୍କୃତିକୁ ଭଲପାଇବା କେଉଁ ଗୁଣର ପରିଚୟ?",o:["ଜାତୀୟ/ଆଞ୍ଚଳିକ ଚେତନା","ଅହଂକାର","ଅଜ୍ଞାନତା","ଅସହିଷ୍ଣୁତା"],a:0,e:"ନିଜ ଭାଷା ଓ ସଂସ୍କୃତି ପ୍ରତି ସମ୍ମାନ ଜାତୀୟ ଓ ଆଞ୍ଚଳିକ ଚେତନାର ପରିଚୟ।"},
+{q:"କବିତାରେ ‘ଉତ୍କଳ’ ଶବ୍ଦର ବ୍ୟବହାର କେଉଁ ଭାବକୁ ଶକ୍ତିଶାଳୀ କରେ?",o:["ଓଡ଼ିଆ ଅସ୍ମିତା","ବ୍ୟକ୍ତିଗତ ଲାଭ","ବିଦେଶ ଯାତ୍ରା","କୃଷି ପ୍ରଣାଳୀ"],a:0,e:"ଉତ୍କଳ ଶବ୍ଦ ଓଡ଼ିଶାର ପରିଚୟ ଓ ଓଡ଼ିଆ ଅସ୍ମିତାକୁ ଉଦ୍‌ବୋଧନ କରେ।"},
+{q:"କବିତାରେ ମାତୃଭୂମିକୁ ବନ୍ଦନା କରିବାର ଅର୍ଥ କ’ଣ?",o:["ଦେଶର ମହିମାକୁ ସ୍ୱୀକାର ଓ ସମ୍ମାନ କରିବା","ଦେଶ ଛାଡ଼ିବା","ଦେଶକୁ ଅବହେଳା କରିବା","କେବଳ ଭ୍ରମଣ କରିବା"],a:0,e:"ବନ୍ଦନା ମାନେ ମାତୃଭୂମିର ମହିମାକୁ ସ୍ୱୀକାର କରି ଶ୍ରଦ୍ଧା ଜଣାଇବା।"},
+{q:"ଏହି କବିତାକୁ କେଉଁ ପ୍ରକାର ରଚନା ଭାବେ ଗ୍ରହଣ କରାଯାଏ?",o:["ଦେଶାତ୍ମବୋଧକ ଗୀତିକବିତା","ହାସ୍ୟନାଟକ","ଗଳ୍ପ","ଭ୍ରମଣକାହାଣୀ"],a:0,e:"ମାତୃଭୂମିର ସ୍ତୁତି ଓ ଦେଶପ୍ରେମ ଥିବାରୁ ଏହା ଦେଶାତ୍ମବୋଧକ ଗୀତିକବିତା।"},
+{q:"କବିତାରୁ ମିଳୁଥିବା ମୁଖ୍ୟ ଶିକ୍ଷା କ’ଣ?",o:["ନିଜ ଜନ୍ମଭୂମିକୁ ଭଲପାଇବା ଓ ସମ୍ମାନ କରିବା","ଅନ୍ୟର ଭାଷାକୁ ଅବମାନ କରିବା","ପ୍ରକୃତିକୁ ନଷ୍ଟ କରିବା","ଇତିହାସକୁ ଭୁଲିଯିବା"],a:0,e:"କବିତା ନିଜ ଜନ୍ମଭୂମି, ଭାଷା, ସଂସ୍କୃତି ଓ ଐତିହ୍ୟକୁ ଭଲପାଇବାର ଶିକ୍ଷା ଦିଏ।"},
+{q:"କବିତାର ଶୀର୍ଷକରେ ‘ଉତ୍କଳ’ ସହ ‘ଜନନୀ’ ଯୋଡ଼ାଯିବାର ଉଦ୍ଦେଶ୍ୟ କ’ଣ?",o:["ଭୂମିକୁ ମାତୃରୂପେ ମାନବୀକରଣ କରିବା","ଭୂମିକୁ ନଦୀ କରିବା","ଏକ ସହରର ନାମ ଦେବା","କବିଙ୍କ ନାମ ଲୁଚାଇବା"],a:0,e:"ଉତ୍କଳକୁ ଜନନୀ ରୂପେ ଚିତ୍ରଣ କରି ମାତୃଭୂମି ପ୍ରତି ଆତ୍ମୀୟତା ଦେଖାଯାଇଛି।"},
+{q:"ଏହି ପାଠର ଅଧ୍ୟୟନ ଦ୍ୱାରା ଛାତ୍ରଛାତ୍ରୀ କେଉଁ ମୂଲ୍ୟବୋଧ ଶିଖନ୍ତି?",o:["ଦେଶପ୍ରେମ ଓ ସାଂସ୍କୃତିକ ଗର୍ବ","ଅସହଯୋଗ","ଅନାଗ୍ରହ","ଅସମ୍ମାନ"],a:0,e:"ପାଠଟି ଦେଶପ୍ରେମ, ଭାଷାପ୍ରେମ ଓ ସାଂସ୍କୃତିକ ଗର୍ବର ମୂଲ୍ୟବୋଧ ଦିଏ।"}
+];
+const form=document.getElementById('quiz');
+const odiaNums=['୧','୨','୩','୪','୫','୬','୭','୮','୯','୧୦','୧୧','୧୨','୧୩','୧୪','୧୫','୧୬','୧୭','୧୮','୧୯','୨୦','୨୧','୨୨','୨୩','୨୪','୨୫','୨୬','୨୭','୨୮','୨୯','୩୦'];
+function render(){
+ form.innerHTML='';
+ questions.forEach((x,i)=>{
+  const box=document.createElement('section');box.className='question';box.id='q'+i;
+  const h=document.createElement('h3');h.innerHTML='<span class="qno">ପ୍ରଶ୍ନ '+odiaNums[i]+'.</span> '+x.q;box.appendChild(h);
+  x.o.forEach((op,j)=>{
+   const label=document.createElement('label');label.className='option';
+   label.innerHTML=`<input type="radio" name="q${i}" value="${j}"><span>${['(କ)','(ଖ)','(ଗ)','(ଘ)'][j]} ${op}</span>`;
+   box.appendChild(label);
+  });
+  const ex=document.createElement('div');ex.className='explain';ex.id='ex'+i;box.appendChild(ex);
+  form.appendChild(box);
+ });
+ updateProgress();
+}
+function updateProgress(){
+ let n=questions.filter((q,i)=>form.querySelector(`input[name="q${i}"]:checked`)).length;
+ document.getElementById('answered').textContent=`ଉତ୍ତର ଦିଆଯାଇଛି: ${n} / ୩୦`;
+ document.getElementById('bar').style.width=(n/questions.length*100)+'%';
+}
+form.addEventListener('change',updateProgress);
+document.getElementById('submit').addEventListener('click',()=>{
+ let score=0,unanswered=0;
+ questions.forEach((q,i)=>{
+  const chosen=form.querySelector(`input[name="q${i}"]:checked`);
+  if(!chosen)unanswered++;
+  const labels=[...document.querySelectorAll(`#q${i} .option`)];
+  labels.forEach((lab,j)=>{
+   lab.classList.remove('correct','wrong');
+   if(j===q.a)lab.classList.add('correct');
+   if(chosen && Number(chosen.value)===j && j!==q.a)lab.classList.add('wrong');
+  });
+  if(chosen && Number(chosen.value)===q.a)score++;
+  const ex=document.getElementById('ex'+i);
+  ex.style.display='block';
+  ex.innerHTML=`<b>${chosen && Number(chosen.value)===q.a?'ଠିକ୍ ଉତ୍ତର!':'ଠିକ୍ ଉତ୍ତର: '+['(କ)','(ଖ)','(ଗ)','(ଘ)'][q.a]+' '+q.o[q.a]}</b><br>${q.e}`;
+ });
+ const pct=Math.round(score/questions.length*100);
+ document.getElementById('score').textContent=`${score} / ${questions.length}`;
+ document.getElementById('remark').textContent=`${pct}% • ${unanswered?unanswered+'ଟି ପ୍ରଶ୍ନର ଉତ୍ତର ଦିଆଯାଇନାହିଁ। ':''}${pct>=80?'ଅତି ଉତ୍ତମ!':pct>=60?'ଭଲ ପ୍ରୟାସ।':pct>=40?'ଆଉଥରେ ଅଭ୍ୟାସ କରନ୍ତୁ।':'ପାଠଟି ପୁଣି ପଢ଼ି ଅଭ୍ୟାସ କରନ୍ତୁ।'}`;
+ document.getElementById('result').style.display='block';
+ document.getElementById('result').scrollIntoView({behavior:'smooth'});
+ document.getElementById('submit').disabled=true;
+ document.getElementById('submit').textContent='Submitted';
+});
+document.getElementById('retry').addEventListener('click',()=>{
+ document.getElementById('submit').disabled=false;
+ document.getElementById('submit').textContent='Submit & Check Score';
+ document.getElementById('result').style.display='none';
+ render();window.scrollTo({top:0,behavior:'smooth'});
+});
+render();
+</script>
+</body>
+</html>
